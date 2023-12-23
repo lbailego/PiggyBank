@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<style>
+    /* Style for the text */
+    .header {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Styling specific sections */
+    .header h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #009111; /* Blue color */
+    }
+
+    .header p {
+        margin-bottom: 15px;
+    }
+
+    .header .subsubheader {
+        font-style: italic;
+    }
+</style>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+
+
+        <div class="py-2">
+
+            <center>
+                <h1 style="font-size: 48px;">Unit 2 Lesson 5: APR</h1>
+            </center>
+                    
+            <div class="content">
+                <div class="header">
+                    <h2>APR, or Annual Percentage Rate:</h2>
+                    <p>APR is crucial because it helps you understand the true cost of borrowing money or using credit. Here's why it's important:</p>
+                    
+                    <h2>1. Standardized Comparison:</h2>
+                    <p>APR gives you a standard way to compare different loan or credit offers. It includes not just the interest rate but also other fees and charges associated with borrowing money, making it easier to compare various financial products.</p>
+                    
+                    <h2>2. True Cost of Borrowing:</h2>
+                    <p>It reflects the total cost of borrowing over a year, including interest and certain fees. Knowing the APR helps you understand how much you’ll actually pay back on top of the amount you borrowed.</p>
+                    
+                    <h2>3. Transparent Financial Decision:</h2>
+                    <p>When comparing loans or credit cards, focusing only on the interest rate might not give the whole picture. The APR accounts for additional costs, allowing you to make more informed and transparent financial decisions.</p>
+                    
+                    <h2>4. Understanding the Impact of Fees:</h2>
+                    <p>Some loans or credit cards might have lower interest rates but higher fees, which can significantly impact the overall cost. APR considers these fees, helping you see the real cost of the borrowing option.</p>
+                    
+                    <h2>5. Regulation and Protection:</h2>
+                    <p>Many countries have regulations requiring lenders to disclose the APR to borrowers. This transparency ensures consumers have essential information to make sound financial choices and helps protect them from deceptive lending practices.</p>
+                    
+                    <p>Understanding the APR empowers you to make smarter decisions about borrowing money, choosing loans or credit cards, and managing your finances more effectively. Always consider the APR along with other terms and conditions when evaluating borrowing options.</p>
+                </div>
+            </div>
+
+      
+
+<a href="./U2L4.html" style="position: fixed; bottom: 10px; left: 270px; color: rgb(0, 133, 69);">Previous Lesson &#8592;</a>
+<a href="./U2quiz.html" style="position: fixed; bottom: 10px; right: 10px; color: rgb(0, 133, 69);">Onto the Quiz &#8594;</a>

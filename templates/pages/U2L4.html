@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<style>
+    /* Style for the text */
+    .header {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Styling specific sections */
+    .header h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #009111; /* Blue color */
+    }
+
+    .header p {
+        margin-bottom: 15px;
+    }
+
+    .header .subsubheader {
+        font-style: italic;
+    }
+</style>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+
+
+        <div class="py-2">
+
+            <center>
+                <h1 style="font-size: 48px;">Unit 2 Lesson 4: Types of Credit</h1>
+            </center>
+                    
+            <div class="content">
+                <div class="header">
+                    <h2>Revolving Credit:</h2>
+                    <p>Definition: Revolving credit is like an open line of credit that you can use repeatedly up to a certain limit. As you use the credit, you can pay it back and then borrow again without having to apply for a new loan each time.</p>
+            
+                    <h2>Examples:</h2>
+                    <p>Credit cards are a common example of revolving credit. You have a credit limit, and you can borrow up to that limit, pay it off, and then borrow again without needing a new loan approval.</p>
+            
+                    <h2>Repayment:</h2>
+                    <p>With revolving credit, you have flexibility in making payments. You can choose to pay the minimum amount due, pay off the entire balance, or any amount in between. The interest you pay depends on the remaining balance.</p>
+            
+                    <div class="subsubheader">
+                        <h2>Installment Credit:</h2>
+                        <p>Definition: Installment credit involves borrowing a fixed amount of money upfront and repaying it in regular fixed payments over a specified period, known as installments.</p>
+                    </div>
+            
+                    <h2>Examples:</h2>
+                    <p>Mortgages, auto loans, personal loans, and student loans are common types of installment credit. When you take out these loans, you receive a specific amount of money and agree to pay it back in fixed installments over time.</p>
+            
+                    <h2>Repayment:</h2>
+                    <p>Payments for installment credit are fixed, meaning they stay the same each month until the loan is paid off. Each payment includes a portion of the borrowed amount (principal) and interest, and they're scheduled over the loan term.</p>
+            
+                    <h2>Key Differences:</h2>
+                    <p>Flexibility: Revolving credit offers flexibility in borrowing and repaying, allowing you to reuse the credit line, while installment credit provides a fixed loan amount with regular payments until it's fully paid off.</p>
+                    <p>Interest Calculation: With revolving credit, the interest you pay is based on the remaining balance as it changes. For installment credit, interest is calculated based on the original loan amount and reduces as you make payments.</p>
+                    <p>Examples: Credit cards are the most common form of revolving credit, while mortgages and car loans are typical examples of installment credit.</p>
+            
+                    <p>Understanding these differences helps in choosing the right type of credit for your specific needs and financial situation.</p>
+                </div>
+            </div>
+      
+
+<a href="./U2L3.html" style="position: fixed; bottom: 10px; left: 270px; color: rgb(0, 133, 69);">Previous Lesson &#8592;</a>
+<a href="./U2L5.html" style="position: fixed; bottom: 10px; right: 10px; color: rgb(0, 133, 69);">Next Lesson &#8594;</a>

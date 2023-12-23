@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<style>
+    /* Style for the text */
+    .header {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Styling specific sections */
+    .header h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #009111; /* Blue color */
+    }
+
+    .header p {
+        margin-bottom: 15px;
+    }
+
+    .header .subsubheader {
+        font-style: italic;
+    }
+</style>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+
+
+        <div class="py-2">
+
+            <center>
+                <h1 style="font-size: 48px;">Unit 2 Lesson 1: Consumer Credit</h1>
+            </center>
+
+           
+<div class="content">
+    <div class="header">
+        <h2>Think of your credit score as a report card for how you handle money.</h2>
+        <p>It's a number that shows how trustworthy you are when it comes to borrowing money or using credit. The score reflects how likely you are to pay back what you owe.</p>
+
+        <h2>Why is it important?</h2>
+        <p>Your credit score is super important because it affects many big financial decisions in your life. When you want to borrow money for things like buying a car, getting a credit card, or getting a loan for a house, lenders check your credit score to decide if they should lend you money. A higher credit score usually means you're seen as more responsible with money, so lenders might offer you better interest rates and more favorable terms.</p>
+
+        <div class="subsubheader">
+            <h2>Example:</h2>
+            <p>Imagine two friends, Sara and John, both want to buy a car. Sara has a high credit score because she always pays her bills on time and doesn't use too much of her available credit. John, on the other hand, has a lower credit score because he's missed a few payments in the past and carries a lot of debt. When they both apply for car loans, Sara gets approved quickly with a low-interest rate because of her good credit. John faces more challenges, gets higher interest rates, or might even get rejected.</p>
+        </div>
+
+        <h2>How to find your credit score:</h2>
+        <p>You can check your credit score through different ways...</p>
+
+        <p>Remember, checking your own credit score won't hurt it. It's a good idea to review your score regularly to keep track of how you're doing financially and to catch any errors or issues that might affect your score.</p>
+
+        <p>In simple terms, your credit score is like a grade for how responsible you are with money. It's important because it affects your ability to borrow money and the terms you're offered. You can find your credit score through credit card apps, certain websites, or financial institutions without hurting your score.</p>
+    </div>
+</div>
+                    
+
+        </div>
+
+<a href="./lesson1.html" style="position: fixed; bottom: 10px; left: 270px; color: rgb(0, 133, 69);">Previous Lesson &#8592;</a>
+<a href="./U2L2.html" style="position: fixed; bottom: 10px; right: 10px; color: rgb(0, 133, 69);">Next Lesson &#8594;</a>

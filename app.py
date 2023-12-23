@@ -27,6 +27,10 @@ def dashboard():
 def about():
     return render_template("pages/about.html")
 
+@app.route("/forum")
+def forum():
+    return render_template("pages/forum.html")
+
 @app.route("/overview")
 def overview():
     return render_template("pages/overview.html")
@@ -47,6 +51,41 @@ def lesson3():
 def lesson4():
     return render_template("pages/lesson4.html") 
 
+@app.route("/U2quiz.html")
+def U2quiz():
+    return render_template("pages/U2quiz.html") 
 
-#if __name__ == "__main__":
-#    app.run(debug=True)
+@app.route("/U2L1.html")
+def U2L1():
+    return render_template("pages/U2L1.html") 
+
+@app.route("/U2L2.html")
+def U2L2():
+    return render_template("pages/U2L2.html") 
+
+@app.route("/U2L3.html")
+def U2L3():
+    return render_template("pages/U2L3.html") 
+
+@app.route("/U2L4.html")
+def U2L4():
+    return render_template("pages/U2L4.html") 
+
+@app.route("/U2L5.html")
+def U2L5():
+    return render_template("pages/U2L5.html") 
+
+@app.route("/forumcbai.html")
+def forumcbai():
+    return render_template("pages/forumcbai.html") 
+
+@app.route("/forummburry.html")
+def forummburry():
+    return render_template("pages/forummburry.html") 
+
+
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
