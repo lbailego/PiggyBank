@@ -83,7 +83,13 @@ def forumcbai():
 def forummburry():
     return render_template("pages/forummburry.html") 
 
+@app.route("/forumrjiang.html")
+def forumrjiang():
+    return render_template("pages/forumrjiang.html") 
 
+@app.route("/forumvyao.html")
+def forumvyao():
+    return render_template("pages/forumvyao.html") 
 
 
 
