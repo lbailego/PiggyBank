@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7; /* Light gray background */
+    }
+
+    .flex-container {
+      display: flex;
+    }
+
+    .navbar {
+      /* Your styling for the navbar */
+      /* For example: */
+      width: 20%; /* Adjust as needed */
+      background-color: #333;
+      color: #fff;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .header {
+      text-align: center;
+      background-color: #2ecc71; /* Green color */
+      color: #ffffff; /* White text color */
+      padding: 20px;
+    }
+
+    .header-title {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .header-subtitle {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+
+
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; /* Allows boxes to wrap to the next line */
+      /*justify-content: space-between; /* Adjust as needed for spacing */
+      align-items: flex-start; /* Align items to the top */
+      height: 80vh; /* Reduced height for visibility */
+      padding-top: 20px; /* Adjust spacing from the top */
+      padding-left: 40px;
+    }
+
+    .box {
+      width: 45%; /* Adjusted width for the boxes */
+      height: 300px; /* Fixed height for the boxes */
+      background-color: #2ecc71; /* Green color */
+      display: flex;
+      align-items: center;
+      color: #ffffff; /* White text color */
+      font-size: 24px; /* Font size for the text */
+      padding: 20px; /* Padding for the text */
+      margin-right: 20px; 
+    }
+    .vbox {
+      width: 45%; /* Adjusted width for the boxes */
+      height: 300px; /* Fixed height for the boxes */
+      background-color: #2ecc71; /* Green color */
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      color: #ffffff; /* White text color */
+      font-size: 24px; /* Font size for the text */
+      padding: 20px; /* Padding for the text */
+    }
+    .text {
+      flex: 1; /* Take up remaining space */
+    }
+
+    .image {
+      flex: 1; /* Take up remaining space */
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      justify-content: center;
+      align-items: center;
+      max-width: 100%; /* Ensure the image fits within its container */
+      max-height: 100%;
+      overflow: hidden; /* Hide overflowing parts of the image */
+      border: 3px solid #ffffff; /* White border around the image */
+    }
+
+    .image img {
+      width: 100%; /* Make the image fill its container */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    .role {
+      margin-top: 10px; /* Add some space between image and text */
+      font-size: 16px; /* Adjust font size for the role */
+      text-align: center; /* Center the text */
+    }
+    .underline-link {
+      text-decoration: underline;
+      color: #2ecc71; /* Change link color as needed */
+      cursor: pointer;
+    }
+
+    .underline-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Styling for the clickable boxes */
+    .box {
+      cursor: pointer;
+    }
+
+    .clickable-div {
+      /* Provide styles for the div */
+      /* This cursor style makes it clear that the div is clickable */
+      cursor: pointer;
+      /* Basic styling for demonstration purposes */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Define the hyperlink styles for the div */
+    .clickable-div a {
+      display: block;
+      width: 45%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit; /* Inherits the color from the parent */
+    }
+
+  </style>
+
+<script>
+  // JavaScript to handle the click event and redirect to the URL
+  document.addEventListener("DOMContentLoaded", function() {
+    // Select all elements with the class 'clickable-div'
+    const clickableDivs = document.querySelectorAll('.clickable-div');
+
+    // Loop through each element and add a click event listener
+    clickableDivs.forEach(function(element) {
+        element.addEventListener('click', function() {
+            // Retrieve the URL from the data-argument attribute of the clicked element
+            const targetURL = this.getAttribute('data-argument');
+            
+            // Redirect to the URL
+            if (targetURL) {
+                window.location.href = targetURL;
+            }
+        });
+    });
+});
+</script>
+
+</head>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+        
+    <div class="content">
+      <header class="header">
+        <h1 class="header-title">The Piggy Bank Forum</h1>
+        <h2 class="header-subtitle">Welcome to the Piggy Bank Forum! Here you will be able to hear and see the stories of our different contributors and their past trades. Please feel free to browse through the perspectives of various different traders and also see the long term outcome of the trade immediately afterwards. If you have an original story, please also feel free to share it and we can publish it for you! </h2>
+      </header>
+            
+      <div class="container">
+
+    <div class="flex-container">
+          <div class="clickable-div box" data-argument="forumrjiang.html">
+              <div class="text">Robert Jiang<br> Microsoft, NASDAQ:MSFT<br>October 23 2023</div>
+              <div class="vbox">
+                  <div class="image">
+                      
+                      <img src="../../static/assets/img/robertjiang.png" alt="Image">
+                  </div>
+                  <div class="role">Associate Contributor, senior at NYU Stern</div>
+              </div>
+          </div>
+  
+          <div class="clickable-div box" data-argument="forumvyao.html">
+              <div class="text">Vincent Yao<br> AMC Entertainment, NYSE:AMC <br>September 14 2023</div>
+              <div class="vbox">
+                  <div class="image">
+                    
+                      <img src="../../static/assets/img/vincentyaoheadshot.png" alt="Image">
+                  </div>
+                  <div class="role">Associate Contributor, freshman at UPenn Wharton</div>
+              </div>
+          </div>
+      </div>
+ 
+
+      <div class="container">
+
+        <div class="flex-container">
+        <div class="clickable-div box " data-argument="forumcbai.html">
+            <div class="text">Christopher Bai<br> Lululemon, NASDAQ:LULU <br> October 13 2023</div>
+                <div class="vbox">
+                  <div class="image">
+                  <!-- Placeholder for the image -->
+                  <img src="../../static/assets/img/IMG_5399.jpg" alt="Image">
+                  </div>
+                  <div class="role">Founder of Piggy Banking</div>
+                </div>
+        </div>
+
+        <div class=" clickable-div box" data-argument="forummburry.html">
+          <div class="text">Michael Burry<br> CDs against Housing Market <br> July 2007</div>
+                <div class="vbox">
+          <div class="image">
+            <!-- Placeholder for the image -->
+            <img src="../../static/assets/img/michaelburry3.png" alt="Image">
+            </div>
+            <div class="role">Hedge Fund Manager</div>
+          </div>
+        </div>
+
+
+    </div>
+      <h2 class="header-subtitle">If you would like to contribute your own personal trade please fill out this <a class="underline-link" href="https://forms.gle/wKCdG1mGFsbtkjj78" target="_blank">form</a>. Or if you would like to work on the Piggy Banking Forum team, please directly reach out to my email.</h2>
+      <!-- Text placed after the container div -->
+      {% include "footer.html" %}
+    </div>
+
+          </div>
+        </body>

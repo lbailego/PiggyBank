@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<style>
+    /* Style for the text */
+    .header {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Styling specific sections */
+    .header h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #009111; /* Blue color */
+    }
+
+    .header p {
+        margin-bottom: 15px;
+    }
+
+    .header .subsubheader {
+        font-style: italic;
+    }
+</style>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+
+
+        <div class="py-2">
+
+            <center>
+                <h1 style="font-size: 48px;">Unit 2 Lesson 3: Borrowing Loans</h1>
+            </center>
+                    
+            <div class="content">
+                <div class="header">
+                    <h2>Loans and Credit:</h2>
+                    <p>Loans and credit are like borrowing someone else's money, and you promise to pay it back later. But when you borrow money, you usually have to pay extra money back too. People use credit for lots of reasons, like buying a car, a house, paying for school, or when there's an emergency and they need money fast.</p>
+            
+                    <h2>Interest:</h2>
+                    <p>When you borrow money, the extra money you pay back is called "interest." It's like a fee for borrowing money. Interest is important because it changes the price of borrowing money over time. It's like paying a little extra for the convenience of borrowing money now instead of waiting until you've saved up enough.</p>
+            
+                    <div class="subsubheader">
+                        <h2>Places That Lend Money:</h2>
+                        <p>There are different places that lend money, like banks, stores (those are called merchants), online lending places where people lend to each other (that's called peer-to-peer), payday loans, and title loans. Each of these places has different rules, how much extra money they charge (interest rates), how you pay the money back, and they might have some problems too.</p>
+                    </div>
+            
+                    <h2>Choosing Where to Borrow:</h2>
+                    <p>To pick the best place to borrow money, you should know what you need the money for, how much you can afford to pay back each month, and what choices you have. It's important to be careful and use credit smartly. That means not borrowing more than you can handle and making sure you can pay it back on time. Avoid getting into too much debt trouble by borrowing only what you really need and being responsible about paying it back.</p>
+            
+                    <p>Being smart about borrowing money helps you manage your finances better and avoid getting into money problems down the road.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+<a href="./U2L2.html" style="position: fixed; bottom: 10px; left: 270px; color: rgb(0, 133, 69);">Previous Lesson &#8592;</a>
+<a href="./U2L4.html" style="position: fixed; bottom: 10px; right: 10px; color: rgb(0, 133, 69);">Next Lesson &#8594;</a>

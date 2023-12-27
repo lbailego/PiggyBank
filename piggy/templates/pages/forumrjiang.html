@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Post - microsoft</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Decreased gap between images */
+        }
+
+        .forum-image:nth-of-type(1) {
+            max-width: 30%; /* Adjust width percentage */
+            max-height: 300px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+
+        .forum-image:nth-of-type(2) {
+            max-width: 50%; /* Adjust width percentage */
+            max-height: 500px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .trade-header {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #008000; /* Green color */
+        }
+
+        .centered-text {
+            text-align: center;
+            font-size: 18px;
+            color: #000000; /* Black color */
+        }
+
+        .BearBull {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .BearBullimage {
+            max-width: 150px; /* Adjust image size */
+            max-height: 150px; /* Adjust image size */
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .link-text {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #00bf4f; /* Blue color for link text */
+        }
+
+        .link-text:hover {
+            text-decoration: underline; /* Maintain underline on hover */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reveal-button {
+            background-color: #008000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hidden-content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .revealed-image {
+            width: 100%; /* Adjust image width as needed */
+            max-width: 150%; /* Ensure responsiveness */
+            border: 4px solid #008000;
+            border-radius: 8px;
+        }
+
+        .takeaways-header {
+            text-align: center;
+            margin-top: 20px;
+            color: #008000;
+        }
+
+        .takeaways-text {
+            text-align: center;
+            color: #008000;
+            font-weight: bold;
+        }
+
+    </style>
+
+<script>
+    function revealContent() {
+        var hiddenContent = document.getElementById("hiddenContent");
+        hiddenContent.style.display = "block";
+    }
+</script>
+
+</head>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+        <div class="container">
+            <header class="header">
+                <h1>MSFT Stock, October 23 2023. </h1>
+                <h2>Posted by Robert Jiang on December 24 2023</h2>
+            </header>
+    
+            <div class="content">
+                <img src="../../static/assets/img/robertjiang.png" alt="Image 1" class="forum-image">
+                <img src="../../static/assets/img/microsoftlogo.png" alt="Image 2" class="forum-image">
+            </div>
+
+
+            <h3 class="trade-header">Introduction:</h3>
+            <p class="centered-text"> Hello everyone, I'm Robert Jiang and I'm a senior at New York University - Stern this year. I've been investing for around 3 years as a hobby. My goal with investing as of now is still learning the ins and outs of the stock market, I plan to start taking it more seriously after college.</p>
+            <br>
+            <h3 class="trade-header">The trade: Shares of MSFT at 329.32$ on October 23, 2023.</h3>
+            <p class="centered-text">I found myself considering an investment in Microsoft stock priced at around $329 on October 23, 2023. Microsoft had been on a steady incline for the past year in a row with over a 60% increase, showcasing a consistent growth trajectory. Despite the upward climb, I was bullish on the stock due to a blend of macro and micro-level factors that pointed to its potential for sustained growth.
+
+                At the macro level, the tech industry's landscape was evolving rapidly, and Microsoft's strategic position within it was undeniably influential. Considering their ownership of OpenAI, a pioneering force in the AI realm, it was evident that Microsoft was poised to dominate the AI space, potentially reaping significant financial rewards. The prospects of monopolizing this burgeoning sector hinted at substantial gains for shareholders, bolstering my confidence in the stock's future.
+                
+                Delving into the micro-level details, Microsoft's ongoing initiatives and strategic decisions further fortified my belief in its long-term growth potential. The company's robust mission and recent strategic moves were key indicators. Their astute leadership and innovative approach were apparent in their plans and partnerships.
+                
+                One pivotal factor that cemented my bullish outlook was Microsoft's pioneering involvement in the AI domain. Understanding the groundbreaking advancements in AI and its increasingly integral role across industries, backing a tech giant like Microsoft, with its foothold in AI through OpenAI, seemed not just wise but almost inevitable.
+                
+                Analyzing Microsoft's third-quarter fiscal report revealed a multitude of reasons for optimism. Their diversification and expansion strategies were on point, mirroring their commitment to growth. I observed their foray into various sectors, leveraging AI to enhance products and services, thereby consolidating their market presence.
+                
+                Despite noting a relatively high P/E ratio, which typically raises concerns about overvaluation, I remained convinced of Microsoft's long-term potential. The synergy between their AI initiatives and their core business functions indicated a trajectory that transcended short-term fluctuations.
+                
+                My decision to invest in Microsoft at $329 was not driven by the anticipation of immediate returns, but rather a belief in the company's capacity to lead and innovate in the evolving tech landscape. The ownership of OpenAI only added to the conviction that this stock held promise for sustained growth and long-term value appreciation.</p>
+
+            <div class="BearBull">
+                <p class="bold-text">Bearish or Bullish?</p>
+                <img src="../../static/assets/img/bullish.jpeg" alt="Your Image" class="BearBullimage">
+            </div>
+
+            <div class="container">
+                <header class="header">
+                    <h1>Financial Reports and Statistics:</h1>
+                    <a href="https://www.microsoft.com/investor/reports/ar23/index.html" class="link-text" target="_blank">Total Annual fiscal Report, July 24 2024</a>
+                    <h2>Here are someother important Financial Statistics as of September 30 2023:</h2>
+                    <br>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Measure</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Content for each cell -->
+                            <tr>
+                                <td>Market Cap</td>
+                                <td>2.784T $</td>
+                            </tr>
+                            <tr>
+                                <td>Forward P/E</td>
+                                <td>36.23</td>
+                            </tr>
+                            <tr>
+                                <td>Profit Margin</td>
+                                <td>35.31%</td>
+                            </tr>
+                            <tr>
+                                <td>Diluted Earnings Per Share</td>
+                                <td>10.34</td>
+                            </tr>
+                            <tr>
+                                <td>EBITDA</td>
+                                <td>108.53B</td>
+                            </tr>
+                            <tr>
+                                <td>Debt/Equity Ratio</td>
+                                <td>47.8%</td>
+                            </tr>
+                            <tr>
+                                <td>52 week change as of trade date</td>
+                                <td>58.08%</td>
+                            </tr>
+                            <tr>
+                                <td>Dividend Ratio</td>
+                                <td>0.8%, 3 times per year</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <header><h2>If you would like to see full detailed statistics, I would recommend searching up Yahoo Finance and your specific stock.</h2></header>
+
+                </header>
+
+                <header><h2>After seeing all of the data leading up to this point, what would you do? When you're ready to find out click the button.</h2></header>
+                <div class="button-container">
+                    <button class="reveal-button" onclick="revealContent()">Reveal Outcome</button>
+                </div>
+                <div id="hiddenContent" class="hidden-content">
+                    <p class="takeaways-text">5 year graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/msftgraph2.png" alt="Revealed Image" class="revealed-image">
+                    <br>
+                    <p class="takeaways-text">1 year graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/msftgraph1.png" alt="Revealed Image" class="revealed-image">
+                     <p class="takeaways-text">My Takeaways:</p>
+                     <h2 class="takeaways-header">I have yet to trade MSFT due to it's consistent growth over the past year. I was a little worried that it will bounce down slightly, so I decided to withold and waited to see if the Federal Reserve would raise interest rates or make any other moves. Unfortunately as of Decemeber 24 2023, the stock has gone up 13% and I regret not trading a stock I was confident in. I think the main takeaway was the importance and power of AI in the next couple of years and to not count it out. Regardless, I will still keep an eye out on the stock. </h2> 
+                </div>
+
+                </div>
+
+
+        </div>
+
+
+
+</body>

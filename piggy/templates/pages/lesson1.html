@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+        <div class="py-2">
+
+            <center>
+                <h1 style="font-size: 48px;">Welcome to Financial Literacy</h1>
+            </center>
+
+        <p>
+            Hello everyone, I’m Christopher Bai and I’m here to welcome you all to Piggy Banking’s course on financial literacy. 
+            Financial literacy is not just the simple idea of saving up money. There’s many more layers to it which we’ll discuss 
+            in the later units. Money used without any planning can quickly turn bad, but if you know how to use it it can be a very 
+            powerful tool. Being financially literate can sound daunting at times but I assure you that as long as you are planning 
+            everything out, it will work out. In addition to the course materials, you'll find hands-on exercises. These activities 
+            let you put what you've learned into practice in your own financial life. Even the smallest steps you take to improve your 
+            financial know-how are a big deal. When you use what you've learned, you're building a strong foundation for a better 
+            financial future. Again I’m excited you all are here with us and this is the first step to becoming 
+            Financially literate, let’s get right into it. 
+        </p>
+        <b>
+            Please feel free throughout the course to watch the walk along videos. Although you won't need them, they are a handy tool. You can begin with the introduction video below
+        </b>
+
+
+        <div style="display: flex; align-items: center; justify-content: center; margin: 20px;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/SbhjTvb9NYU" frameborder="0" allowfullscreen style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);"></iframe>
+        </div>
+        
+
+      
+        <a href="./overview" style="position: fixed; bottom: 10px; left: 270px; color: rgb(0, 133, 69);">Back to Course Overview &#8592;</a>
+<a href="./U2L1.html" style="position: fixed; bottom: 10px; right: 10px; color: rgb(0, 133, 69);">Next Lesson &#8594;</a>
+
+            </div>
+        </div>
+
+        

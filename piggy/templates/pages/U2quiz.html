@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
+
+<head>
+    <style>
+ 
+ .header-container {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .unit-header {
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .subheader {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+        .content {
+        display: flex;
+        justify-content: space-around; /* Adjust to 'space-between' if you want more space between the boxes */
+        flex-wrap: wrap;
+    }
+        .quiz-container {
+            width: 300px;
+            margin: 20px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        .quiz-container .question {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    
+        .quiz-container .choice-button {
+            display: block;
+            margin: 10px auto;
+        }
+    
+        .quiz-container .check-answer-button {
+            display: block;
+            width: 120px;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            color: white;
+            background-color: green;
+            cursor: pointer;
+        }
+    
+        .quiz-container .answer-feedback {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- Your header and sidebar -->
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+        {% include "navbar.html" %}
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+
+        <!-- HTML code inside the open space -->
+        <div class="content">
+            <div class="header-container">
+                <div class="unit-header">
+                    Unit 2 Quiz
+                </div>
+        
+                <div class="subheader">
+                    Provided below are 5 questions about topics we have gone over in this unit. Try your best and use the explanations to sharpen your knowledge!
+                </div>
+            </div>
+
+       <div class="content">
+    <div id="Q1" class="quiz-container">
+        <div class="quiz">
+        <div class="question">1: What is the purpose of a credit score?</div>
+        <label>
+            <input type="radio" name="question1" value="option1" class="choice-button">A: To track your daily expenses.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question1" value="option2" class="choice-button">B: To show your trustworthiness in handling money.
+
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question1" value="option3" class="choice-button">C: To calculate your income.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question1" value="option4" class="choice-button">D: To predict your future career.
+            <span class="marker"></span>
+        </label>
+        <button class="check-answer-button">Check Answer</button>
+        <div class="answer-feedback"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#Q1 .check-answer-button').on('click', function() {
+            var selectedAnswer = $('#Q1 input[name="question1"]:checked').val();
+            var correctAnswer = 'option2';
+
+            if (selectedAnswer === correctAnswer) {
+                $('#Q1 .answer-feedback').text('Correct').css('color', 'green');
+            } else {
+                $('#Q1 .answer-feedback').text('Incorrect. Explanation: A is incorrect because credit score assesses your ability to handle money and repay debts. Options C and D are incorrect as a credit score is not directly related to calculating income or predicting a career.').css('color', 'red');
+            }
+        });
+    });
+</script>
+
+<div class="content">
+    <div id="Q2" class="quiz-container">
+        <div class="quiz">
+            <div class="question">2: Which action can positively impact your credit score?</div>
+            <label>
+                <input type="radio" name="question2" value="option5" class="choice-button"> A: Consistently paying bills on time.
+                <span class="marker"></span>
+            </label>
+            <label>
+                <input type="radio" name="question2" value="option6" class="choice-button"> B: Opening multiple new credit accounts rapidly.
+                <span class="marker"></span>
+            </label>
+            <label>
+                <input type="radio" name="question2" value="option7" class="choice-button"> C: Ignoring errors on your credit report.
+                <span class="marker"></span>
+            </label>
+            <label>
+                <input type="radio" name="question2" value="option8" class="choice-button"> D: Keeping credit utilization high, near or above the credit limit.
+                <span class="marker"></span>
+            </label>
+            <button class="check-answer-button">Check Answer</button>
+            <div class="answer-feedback"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#Q2 .check-answer-button').on('click', function() {
+            var selectedAnswer = $('#Q2 input[name="question2"]:checked').val();
+            var correctAnswer = 'option5'; // Correct answer is option5 - Consistently paying bills on time
+
+            if (selectedAnswer === correctAnswer) {
+                $('#Q2 .answer-feedback').text('Correct').css('color', 'green');
+            } else {
+                $('#Q2 .answer-feedback').text('Incorrect. Timely payments have a positive impact on your credit score. Options B, C, and D can negatively affect your score—rapidly opening new accounts, ignoring report errors, and high credit utilization can lower your score.').css('color', 'red');
+            }
+        });
+    });
+</script>
+
+<div class="content">
+    <div id="Q3" class="quiz-container">
+        <div class="quiz">
+        <div class="question">3: What is the main difference between revolving credit and installment credit?</div>
+        <label>
+            <input type="radio" name="question3" value="option9" class="choice-button">A: Interest rates are fixed in installment credit.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question3" value="option10" class="choice-button">B: Payments in revolving credit are fixed.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question3" value="option11" class="choice-button">C: Revolving credit offers flexibility in borrowing and repaying.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question3" value="option12" class="choice-button">D: Installment credit allows borrowing repeatedly without new approvals.
+            <span class="marker"></span>
+        </label>
+        <button class="check-answer-button">Check Answer</button>
+        <div class="answer-feedback"></div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#Q3 .check-answer-button').on('click', function() {
+            var selectedAnswer = $('#Q3 input[name="question3"]:checked').val();
+            var correctAnswer = 'option9';
+
+            if (selectedAnswer === correctAnswer) {
+                $('#Q3 .answer-feedback').text('Correct').css('color', 'green');
+            } else {
+                $('#Q3 .answer-feedback').text('Incorrect. Option A is incorrect because installment credit payments are fixed, not interest rates. Option B is incorrect as payments in revolving credit are not fixed. Option D is incorrect as installment credit involves fixed borrowing and repayments.').css('color', 'red');
+            }
+        });
+    });
+</script>
+
+<div class="content">
+    <div id="Q4" class="quiz-container">
+        <div class="quiz">
+        <div class="question">4: Why is APR important when considering loans or credit cards?</div>
+        <label>
+            <input type="radio" name="question4" value="option13" class="choice-button">A: It only reflects the interest rate.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question4" value="option14" class="choice-button">B: It helps compare different financial products without fees.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question4" value="option15" class="choice-button">C: It gives a standard way to compare borrowing costs.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question4" value="option16" class="choice-button">D: APR has no impact on borrowing decisions.
+            <span class="marker"></span>
+        </label>
+        <button class="check-answer-button">Check Answer</button>
+        <div class="answer-feedback"></div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#Q4 .check-answer-button').on('click', function() {
+            var selectedAnswer = $('#Q4 input[name="question4"]:checked').val();
+            var correctAnswer = 'option15';
+
+            if (selectedAnswer === correctAnswer) {
+                $('#Q4 .answer-feedback').text('Correct').css('color', 'green');
+            } else {
+                $('#Q4 .answer-feedback').text('Incorrect. Option A is incorrect as APR includes fees, not just the interest rate. Option B is incorrect as APR includes fees, aiding comparison. Option D is incorrect as APR significantly impacts borrowing decisions by showing the true borrowing cost.').css('color', 'red');
+            }
+        });
+    });
+</script>
+
+<div class="content">
+    <div id="Q5" class="quiz-container">
+        <div class="quiz">
+        <div class="question">5: Where can you find your credit score without impacting it negatively?</div>
+        <label>
+            <input type="radio" name="question5" value="option17" class="choice-button">A: By regularly checking your own credit report.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question5" value="option18" class="choice-button">B: By applying for multiple new credit cards.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question5" value="option19" class="choice-button">C: By ignoring any errors on your credit report.
+            <span class="marker"></span>
+        </label>
+        <label>
+            <input type="radio" name="question5" value="option20" class="choice-button">D: By not checking your credit score at all.
+            <span class="marker"></span>
+        </label>
+        <button class="check-answer-button">Check Answer</button>
+        <div class="answer-feedback"></div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#Q5 .check-answer-button').on('click', function() {
+            var selectedAnswer = $('#Q5 input[name="question4"]:checked').val();
+            var correctAnswer = 'option17';
+
+            if (selectedAnswer === correctAnswer) {
+                $('#Q5 .answer-feedback').text('Correct').css('color', 'green');
+            } else {
+                $('#Q5 .answer-feedback').text('Incorrect. Option B is incorrect as multiple new credit card applications can negatively impact your credit score. Option C is incorrect as ignoring errors can affect your score. Option D is incorrect; checking your own credit score does not hurt it.').css('color', 'red');
+            }
+        });
+    });
+</script>
+
+
+<a href="./U2L5.html" style="position: fixed; bottom: 10px; left: 270px; color: rgb(0, 133, 69);">Previous Lesson &#8592;</a>
+<a href="./U3L1.html" style="position: fixed; bottom: 10px; right: 10px; color: rgb(0, 133, 69);">Next Unit &#8594;</a>
+
+
+
+
+</body>
+
+
+</html>

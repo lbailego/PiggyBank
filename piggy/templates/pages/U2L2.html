@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<style>
+    /* Style for the text */
+    .header {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Styling specific sections */
+    .header h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #009111; /* Blue color */
+    }
+
+    .header p {
+        margin-bottom: 15px;
+    }
+
+    .header .subsubheader {
+        font-style: italic;
+    }
+</style>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+
+
+        <div class="py-2">
+
+            <center>
+                <h1 style="font-size: 48px;">Unit 2 Lesson 2: How to raise Consumer Credit</h1>
+            </center>
+                    
+                    <div style="display: flex; align-items: center; justify-content: center; margin: 20px;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9r97ogOP0cs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+
+        </div>
+
+<a href="./U2L1.html" style="position: fixed; bottom: 10px; left: 270px; color: rgb(0, 133, 69);">Previous Lesson &#8592;</a>
+<a href="./U2L3.html" style="position: fixed; bottom: 10px; right: 10px; color: rgb(0, 133, 69);">Next Lesson &#8594;</a>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Post - lululemon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Decreased gap between images */
+        }
+
+        .forum-image:nth-of-type(1) {
+            max-width: 30%; /* Adjust width percentage */
+            max-height: 300px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+
+        .forum-image:nth-of-type(2) {
+            max-width: 50%; /* Adjust width percentage */
+            max-height: 500px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .trade-header {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #008000; /* Green color */
+        }
+
+        .centered-text {
+            text-align: center;
+            font-size: 18px;
+            color: #000000; /* Black color */
+        }
+
+        .BearBull {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .BearBullimage {
+            max-width: 150px; /* Adjust image size */
+            max-height: 150px; /* Adjust image size */
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .link-text {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #00bf4f; /* Blue color for link text */
+        }
+
+        .link-text:hover {
+            text-decoration: underline; /* Maintain underline on hover */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reveal-button {
+            background-color: #008000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hidden-content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .revealed-image {
+            width: 100%; /* Adjust image width as needed */
+            max-width: 150%; /* Ensure responsiveness */
+            border: 4px solid #008000;
+            border-radius: 8px;
+        }
+
+        .takeaways-header {
+            text-align: center;
+            margin-top: 20px;
+            color: #008000;
+        }
+
+        .takeaways-text {
+            text-align: center;
+            color: #008000;
+            font-weight: bold;
+        }
+
+    </style>
+
+<script>
+    function revealContent() {
+        var hiddenContent = document.getElementById("hiddenContent");
+        hiddenContent.style.display = "block";
+    }
+</script>
+
+</head>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+        <div class="container">
+            <header class="header">
+                <h1>LULU Stock, October 13 2023. </h1>
+                <h2>Posted by Christopher Bai on December 21 2023</h2>
+            </header>
+    
+            <div class="content">
+                <img src="../../static/assets/img/IMG_5399.png" alt="Image 1" class="forum-image">
+                <img src="../../static/assets/img/lululemon.jpeg" alt="Image 2" class="forum-image">
+            </div>
+
+
+            <h3 class="trade-header">Introduction:</h3>
+            <p class="centered-text"> Hello, I'm Christopher Bai an 11th grader at the Lawrenceville School in NJ. I have been investing for 4 years now and I am investing at an early age to for long term goals.</p>
+            <br>
+            <h3 class="trade-header">The trade: Shares of LULU at 377.69 on October 13, 2023.</h3>
+            <p class="centered-text">I was debating purchasing LULU stock at ~$379. LULU stock was not hitting a low by all means and was coming off a high growth period and was up 25% from March 2023-October 2023. However, I believed in the growth of the stock due to the company’s innovation and interest in fast growth, the stock would still grow. I decided upon assessing the company mission and recent initiatives. I found out that Lululemon was going to lead its partnership with the Canadian National Team going into the 2028 Olympics in LA. I saw this as a showing for the company’s growth and I believed that partnership would show shareholders the high upside potential of the company. Through the company’s third quarter fiscal report, I also saw that Lululemon’s men’s apparel market was currently following a 5-year growth plan to double revenue by 2026 by quadrupling international sales while doubling digital and menswear sales. I believed this would be the perfect time to jump in on the stock as a long term holding. However, I did see that the P/E ratio of the stock was higher than I usually like at 28.49. P/E ratio is the ratio of the price of the stock and the earnings per stock meaning that a low P/E signifies that the stock is undervalued whereas a higher P/E signifies overvaluation. But like I said earlier, I was pretty confident that the rising industry in athletic wear and recent initiatives would relieve my concerns. I was hesitant and wasn’t betting on an immediate return but I knew this stock would hold long term and I purchased LULU stock at ~379$. </p>
+
+            <div class="BearBull">
+                <p class="bold-text">Bearish or Bullish?</p>
+                <img src="../../static/assets/img/bullish.jpeg" alt="Your Image" class="BearBullimage">
+            </div>
+
+            <div class="container">
+                <header class="header">
+                    <h1>Financial Reports and Statistics:</h1>
+                    <a href="https://corporate.lululemon.com/investors/news-and-events/events-and-presentations/2023/lululemon-athletica-q2-2023-results class=" class="link-text" target="_blank">Q2 Financial Report, August 31 2023</a>
+                    <br>
+                    <a href="https://finance.yahoo.com/news/lululemon-athletica-inc-nasdaq-lulu-141525617.html#:~:text=For%20Q3%2C%20total%20net%20revenue,686%20stores%20across%20the%20globe." class="link-text" target="_blank">Q3 Financial Report, December 7 2023</a>
+                    <h2>Here are someother important Financial Statistics as of October 31 2023:</h2>
+                    <br>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Measure</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Content for each cell -->
+                            <tr>
+                                <td>Market Cap</td>
+                                <td>49.79B</td>
+                            </tr>
+                            <tr>
+                                <td>Forward P/E</td>
+                                <td>28.49</td>
+                            </tr>
+                            <tr>
+                                <td>Profit Margin</td>
+                                <td>10.89%</td>
+                            </tr>
+                            <tr>
+                                <td>Diluted Earnings Per Share</td>
+                                <td>7.88</td>
+                            </tr>
+                            <tr>
+                                <td>EBITDA</td>
+                                <td>2.4B</td>
+                            </tr>
+                            <tr>
+                                <td>Debt/Equity Ratio</td>
+                                <td>33.1%</td>
+                            </tr>
+                            <tr>
+                                <td>52 week change as of trade date</td>
+                                <td>30%</td>
+                            </tr>
+                            <tr>
+                                <td>Dividend Ratio</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <header><h2>If you would like to see full detailed statistics, I would recommend searching up Yahoo Finance and your specific stock.</h2></header>
+                
+                </header>
+
+                <header><h2>After seeing all of the data leading up to this point, what would you do? When you're ready to find out click the button.</h2></header>
+                <div class="button-container">
+                    <button class="reveal-button" onclick="revealContent()">Reveal Outcome</button>
+                </div>
+                <div id="hiddenContent" class="hidden-content">
+                    <p class="takeaways-text">5 year graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/cbailulugraph.png" alt="Revealed Image" class="revealed-image">
+                    <br>
+                    <p class="takeaways-text">1 year graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/cbailulugraph2.png" alt="Revealed Image" class="revealed-image">
+                     <p class="takeaways-text">My Takeaways:</p>
+                     <h2 class="takeaways-header">Ultimately, I'm very glad I made this decision. The P/E ratio has increased upwards of 60, which is way to high. I will most likely be selling my stocks in Lululemon and be taking my profits. This was a perfect example of how to use your market research of the company as oftentimes stockholder's sentiment on the company is very important.</h2>
+                   
+                </div>
+
+                </div>
+
+
+        </div>
+
+
+
+</body>

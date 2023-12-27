@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
+<head>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: #444;
+            border: 1px solid #888;
+            width: 100%;
+            margin: 20px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 5px;
+            background-color: #4CAF50;
+            color: #464646;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .unit-quiz-button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+        <div class="flex flex-col flex-1 w-full">
+            <main class="h-full overflow-y-auto">
+                <div class="container px-6 mx-auto grid">
+
+                    
+                    <h2 style="font-size: 2.6rem;"
+                        class="mt-6 font-bold text-gray-700 text-center dark:text-gray-200 ml-8">
+                        Investing Simplified Course:
+                    </h2>
+                    <h3 style="font-size: 1.5rem;" class="mt-4 mb-2 font-semibold text-gray-600 dark:text-gray-400 text-center">
+                        Made by Christopher Bai
+                    </h3>
+                    <center>
+                    <div style="width: 1000px; ">
+                        <table style="width: 100%;">
+                          <tr>
+                            <td style="width: 50%;">
+                              <div style="border: 10px solid rgb(0, 100, 37);">
+                                <img src="/static/assets/img/piggylogo.jpeg" class="img-fluid img-thumbnail" style="width: 100%;">
+                              </div>
+                            </td>
+                            <td style="width: 50%;">
+                                <p class="text-lg text-gray-800 dark:text-gray-600 ml-8 bg-gray-200">
+                                    In the following, we will explain the basics of investing, different types of investments, and how you can get started!
+                                  </p>
+                                  <br>
+                                  <p class="text-md text-gray-600 dark:text-gray-600 ml-8">
+                                    Usually when people think of investing, they think of extremely wealthy people from Wall Street putting hours of their life into investing. While this may be true, there are many different ways of investing and believe it or not, you can also invest.
+                                  </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </center>
+                    <center>
+                        <p><span id="changingText" style="font-size: 2.5rem;">Follow the lessons below to begin your financial journey!</span></p>
+
+                        <script>
+                            function changeTextColor() {
+                                var textElement = document.getElementById("changingText");
+                                var currentColor = textElement.style.color;
+                                textElement.style.color = (currentColor === "green") ? "black" : "green";
+                            }
+                    
+                            setInterval(changeTextColor, 1000);
+                        </script>
+                    </center>
+
+                    <body>
+                        <div class="box">
+                            <div class="header">Unit 1: Welcome to Financial Literacy</div>
+                            <a href= "./lesson1.html" class="button" id="consumer-credit">Opening Video</a>
+                        </div>
+                    </body>
+
+                    <body>
+                        <div class="box">
+                            <div class="header">Unit 2: Credit and Loans</div>
+                            <a href="U2L1.html" class="button" id="consumer-credit">Consumer Credit</a>
+                            <a href="U2L2.html" class="button" id="raise-credit-score">How to Raise Credit Score</a>
+                            <a href="U2L3.html" class="button" id="borrowing-loans">Borrowing Loans</a>
+                            <a href="U2L4.html" class="button" id="types-credit">Types of Credit</a>
+                            <a href="U2L5.html" class="button" id="types-credit">What is APR?</a>
+                            <a href="U2quiz.html" class="unit-quiz-button">Unit 2 Quiz</a>
+                        </div>
+                    </body>
+                    <br>
+                    <h3 style="font-size: 1.5rem;" class="mt-4 mb-2 font-semibold text-gray-600 dark:text-gray-400 text-center">
+                        The lessons below are being worked on. They will be ready soon!
+                    </h3>
+
+
+                    <body>
+                        <div class="box">
+                            <div class="header">Unit 3: Introduction to the Investing Market</div>
+                            <a href=".html" class="button" id="consumer-credit">Budgeting and Saving</a>
+                            <a href=".html" class="button" id="raise-credit-score">Assessing the Market</a>
+                            <a href=".html" class="button" id="borrowing-loans">Types of Investments/a>
+                            <a href=".html" class="unit-quiz-button">Unit 3 Quiz</a>
+                        </div>
+                    </body>
+                    <body>
+                        <div class="box">
+                            <div class="header">Unit 4: Let's Invest</div>
+                            <a href=".html" class="button" id="consumer-credit">Understanding at a Macro Level</a>
+                            <a href=".html" class="button" id="raise-credit-score">Understanding at a Micro Level</a>
+                            <a href=".html" class="button" id="borrowing-loans">Where do I start?</a>
+                            <a href=".html" class="unit-quiz-button">Unit 4 Quiz</a>
+                        </div>
+                    </body>
+                    <body>
+                        <div class="box">
+                            <div class="header">Unit 5: Insurance and Retirement</div>
+                            <a href=".html" class="button" id="consumer-credit">Car and Life Insurance</a>
+                            <a href=".html" class="button" id="raise-credit-score">401k and other Insurance Funds</a>
+                            <a href=".html" class="unit-quiz-button">Unit 5 Quiz</a>
+                        </div>
+                    </body>
+                    <body>
+                        <div class="box">
+                            <div class="header">Unit 6: Last step to Financial Literacy</div>
+                            <a href=".html" class="unit-quiz-button">Course Test</a>
+                        </div>
+                    </body>
+
+            </div>
+
+            {% include "footer.html" %}
+            </div>
+

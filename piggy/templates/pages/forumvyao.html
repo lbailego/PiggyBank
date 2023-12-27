@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Post - AMC</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Decreased gap between images */
+        }
+
+        .forum-image:nth-of-type(1) {
+            max-width: 30%; /* Adjust width percentage */
+            max-height: 300px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+
+        .forum-image:nth-of-type(2) {
+            max-width: 50%; /* Adjust width percentage */
+            max-height: 500px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .trade-header {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #008000; /* Green color */
+        }
+
+        .centered-text {
+            text-align: center;
+            font-size: 18px;
+            color: #000000; /* Black color */
+        }
+
+        .BearBull {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .BearBullimage {
+            max-width: 150px; /* Adjust image size */
+            max-height: 150px; /* Adjust image size */
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .link-text {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #00bf4f; /* Blue color for link text */
+        }
+
+        .link-text:hover {
+            text-decoration: underline; /* Maintain underline on hover */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reveal-button {
+            background-color: #008000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hidden-content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .revealed-image {
+            width: 100%; /* Adjust image width as needed */
+            max-width: 150%; /* Ensure responsiveness */
+            border: 4px solid #008000;
+            border-radius: 8px;
+        }
+
+        .takeaways-header {
+            text-align: center;
+            margin-top: 20px;
+            color: #008000;
+        }
+
+        .takeaways-text {
+            text-align: center;
+            color: #008000;
+            font-weight: bold;
+        }
+
+    </style>
+
+<script>
+    function revealContent() {
+        var hiddenContent = document.getElementById("hiddenContent");
+        hiddenContent.style.display = "block";
+    }
+</script>
+
+</head>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+        <div class="container">
+            <header class="header">
+                <h1>AMC Stock, September 14 2023. </h1>
+                <h2>Posted by Vincent Yao on December 26 2023</h2>
+            </header>
+    
+            <div class="content">
+                <img src="../../static/assets/img/vincentyaoheadshot.png" alt="Image 1" class="forum-image">
+                <img src="../../static/assets/img/amclogo.png" alt="Image 2" class="forum-image">
+            </div>
+
+
+            <h3 class="trade-header">Introduction:</h3>
+            <p class="centered-text"> Hello, I'm Vincent Yao and I'm a freshman at UPenn Wharton. I'm not a huge stock investor, but I've learned a few things here and there. In the future, I hope to spend a lot more time learning about stocks and pursue a career in finance.</p>
+            <br>
+            <h3 class="trade-header">The trade: Shares of AMC at 8.14 on September 14, 2023.</h3>
+            <p class="centered-text">AMC Entertainment Holdings Inc (NYSE: AMC) is a prominent American movie theater chain and entertainment company. As of September 14th, it is currently trading at $8.14, an increase of over 13% in the past 5 days. Although AMC is distressed, I believe that the firm is undervalued because of its recent financial deals and new business model.
+
+                On Wednesday, AMC successfully raised around $325 million in new equity capital by issuing 40 million shares. This figure adds to the previous $435.3 million in cash and equivalents that the company had reported in the last earnings season – totaling $760 million. This move ends much of the bankruptcy fears shared by investors over the past year. In addition, AMC has also finalized a deal with Taylor Swift to be the sole distributor of her movie “Taylor Swift: The Eras Tour”. This move has already broken box office records by recording over $65 million in box office sales (as of 9/15) and projects up to $1 billion for total revenue generated.
+                
+                Furthermore, AMC’s improved business plan that seeks to target new streams of revenue, such as showing musical concerts, replaying older movies, and offering a subscription service, has allowed the firm to improve its cash flow despite recent events (Hollywood strikes which will hopefully end soon). AMC's second quarter earnings showed revenue rising 16% year over year and so far, its third quarter total revenue is about $2.4 billion – which is already a 21% increase from last year. As competitors such as Regal and Cinemark face difficulties with movie release dates continuing to delay, AMC can take advantage of the entertainment market through exploring new revenue streams.
+                
+                Ultimately, due to AMC’s recent equity raise and new business model, I believe that AMC’s stock will rise in the next few months.</p>
+
+            <div class="BearBull">
+                <p class="bold-text">Bearish or Bullish?</p>
+                <img src="../../static/assets/img/bullish.jpeg" alt="Your Image" class="BearBullimage">
+            </div>
+
+          
+
+            <div class="container">
+                <header class="header">
+                    <h1>Financial Reports and Statistics:</h1>
+                    <a href="https://investor.amctheatres.com/financial-information/financial-results" class="link-text" target="_blank">Q3 Financial Report, September 30 2023</a>
+                    <br>
+                    <a href="https://investor.amctheatres.com/financial-information/income-statement" class="link-text" target="_blank"> Q3 Income Statment, September 30 2023</a>
+                    <br>
+                    <a href="https://investor.amctheatres.com/financial-information/balance-sheet" class="link-text" target="_blank"> Q3 Balance Sheet, September 30 2023</a>
+                    <br>
+                    <a href="https://investor.amctheatres.com/financial-information/cash-flow" class="link-text" target="_blank"> Q3 Cash Flow, September 30 2023</a>
+                    <br>
+                    <h2>Here are someother important Financial Statistics as of September 30 2023:</h2>
+                    <br>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Measure</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Content for each cell -->
+                            <tr>
+                                <td>Market Cap</td>
+                                <td>1.51B</td>
+                            </tr>
+                            <tr>
+                                <td>Forward P/E</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Profit Margin</td>
+                                <td>-10.9%</td>
+                            </tr>
+                            <tr>
+                                <td>Diluted Earnings Per Share</td>
+                                <td>-3.00</td>
+                            </tr>
+                            <tr>
+                                <td>EBITDA</td>
+                                <td>369M</td>
+                            </tr>
+                            <tr>
+                                <td>Debt/Equity Ratio</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>52 week change as of trade date</td>
+                                <td>-80.7%</td>
+                            </tr>
+                            <tr>
+                                <td>Dividend Ratio</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <header><h2>If you would like to see full detailed statistics, I would recommend searching up Yahoo Finance and your specific stock.</h2></header>
+                
+                </header>
+
+                <header><h2>After seeing all of the data leading up to this point, what would you do? When you're ready to find out click the button.</h2></header>
+                <div class="button-container">
+                    <button class="reveal-button" onclick="revealContent()">Reveal Outcome</button>
+                </div>
+                <div id="hiddenContent" class="hidden-content">
+                    <p class="takeaways-text">1 year graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/amcstockgraph2.png" alt="Revealed Image" class="revealed-image">
+                    <br>
+                    <p class="takeaways-text">6 month graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/amcstockgraph1.png" alt="Revealed Image" class="revealed-image">
+                     <p class="takeaways-text">My Takeaways:</p>
+                     <h2 class="takeaways-header"> I didn't actually buy the stock but I was pretty confident with it. I was pretty new to stock pitches so I had to learn everything pretty quick. So, one big lesson I learned when searching for stocks to pitch is the importance of a good investment vs a good company (For example, Costco might be a great company, but it's stock might be overvalued so even if it's a great company, it might not be a great investment).
+
+                        What happened to AMC Stock: grew 35.14% to $11.00 on Oct. 12th and stayed around $10.00 for the next month until Nov 8th. But since then, the stock price has dropped a lot and is at $6.11.</h2>
+                   
+                </div>
+
+                </div>
+
+
+        </div>
+
+
+
+</body>
