@@ -13,9 +13,9 @@
       background-color: #f7f7f7; /* Light gray background */
     }
 
-    .flex-container {
+  .flex-container {
       display: flex;
-    }
+    } 
 
     .navbar {
       /* Your styling for the navbar */
@@ -52,12 +52,11 @@
     .container {
       display: flex;
       justify-content: space-around;
-      flex-wrap: wrap; /* Allows boxes to wrap to the next line */
-      /*justify-content: space-between; /* Adjust as needed for spacing */
+      flex-wrap: wrap; /* Allows boxes to wrap to the next line */ /* Adjust as needed for spacing */
       align-items: flex-start; /* Align items to the top */
       height: 80vh; /* Reduced height for visibility */
       padding-top: 20px; /* Adjust spacing from the top */
-      padding-left: 40px;
+      margin-left: 20px; /*needs fixing*/
     }
 
     .box {
@@ -182,9 +181,57 @@
         <h1 class="header-title">The Piggy Bank Forum</h1>
         <h2 class="header-subtitle">Welcome to the Piggy Bank Forum! Here you will be able to hear and see the stories of our different contributors and their past trades. Please feel free to browse through the perspectives of various different traders and also see the long term outcome of the trade immediately afterwards. If you have an original story, please also feel free to share it and we can publish it for you! </h2>
       </header>
+      <div class="container">
+        <div class="flex-container">
+              <div class="clickable-div box" data-argument="forumchu.html">
+                  <div class="text">Christopher Hu<br>NVIDIA Corp., NASDAQ:NVDA<br>May 2020</div>
+                  <div class="vbox">
+                      <div class="image">
+                          
+                          <img src="../../static/assets/img/chupfp.jpeg" alt="Image">
+                      </div>
+                      <div class="role">Associate Contributor, Sophmore at the Lawrenceville School</div>
+                  </div>
+              </div>
+      
+              <div class="clickable-div box" data-argument="forumrshah.html">
+                  <div class="text">Rishi Shah<br> Exxon Mobile., NYSE: XOM<br>November 2020</div>
+                  <div class="vbox">
+                      <div class="image">
+                        
+                          <img src="../../static/assets/img/rshahpfp.jpg" alt="Image">
+                      </div>
+                      <div class="role">Director of Club Operations, Junior at the Peddie School</div>
+                  </div>
+              </div>
+          </div>
+
+      <div class="container">
+        <div class="flex-container">
+              <div class="clickable-div box" data-argument="forumawoo.html">
+                  <div class="text">Anthony Woo<br> Apple, NASDAQ:APPL<br>January 2023</div>
+                  <div class="vbox">
+                      <div class="image">
+                          
+                          <img src="../../static/assets/img/woopfp.jpeg" alt="Image">
+                      </div>
+                      <div class="role">Associate Contributor, Sophmore at the Lawrenceville School</div>
+                  </div>
+              </div>
+      
+              <div class="clickable-div box" data-argument="forumazweiback.html">
+                  <div class="text">Andrew Zweiback<br> NVIDIA Corp., NASDAQ:NVDA <br>November 2019</div>
+                  <div class="vbox">
+                      <div class="image">
+                        
+                          <img src="../../static/assets/img/azweibackpfp.png" alt="Image">
+                      </div>
+                      <div class="role">Associate Contributor, Sophmore at the Lawrenceville School</div>
+                  </div>
+              </div>
+          </div>
             
       <div class="container">
-
     <div class="flex-container">
           <div class="clickable-div box" data-argument="forumrjiang.html">
               <div class="text">Robert Jiang<br> Microsoft, NASDAQ:MSFT<br>October 23 2023</div>

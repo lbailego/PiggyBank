@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Post - Exxon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Decreased gap between images */
+        }
+
+        .forum-image:nth-of-type(1) {
+            max-width: 30%; /* Adjust width percentage */
+            max-height: 300px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+
+        .forum-image:nth-of-type(2) {
+            max-width: 50%; /* Adjust width percentage */
+            max-height: 500px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .trade-header {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #008000; /* Green color */
+        }
+
+        .centered-text {
+            text-align: center;
+            font-size: 18px;
+            color: #000000; /* Black color */
+        }
+
+        .BearBull {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .BearBullimage {
+            max-width: 150px; /* Adjust image size */
+            max-height: 150px; /* Adjust image size */
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .link-text {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #00bf4f; /* Blue color for link text */
+        }
+
+        .link-text:hover {
+            text-decoration: underline; /* Maintain underline on hover */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reveal-button {
+            background-color: #008000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hidden-content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .revealed-image {
+            width: 100%; /* Adjust image width as needed */
+            max-width: 150%; /* Ensure responsiveness */
+            border: 4px solid #008000;
+            border-radius: 8px;
+        }
+
+        .takeaways-header {
+            text-align: center;
+            margin-top: 20px;
+            color: #008000;
+        }
+
+        .takeaways-text {
+            text-align: center;
+            color: #008000;
+            font-weight: bold;
+        }
+
+    </style>
+
+<script>
+    function revealContent() {
+        var hiddenContent = document.getElementById("hiddenContent");
+        hiddenContent.style.display = "block";
+    }
+</script>
+
+</head>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+        <div class="container">
+            <header class="header">
+                <h1>Exxon Mobile Stock, Novemeber 2020. </h1>
+                <h2>Posted by Rishi Shah on January 22 2024</h2>
+            </header>
+    
+            <div class="content">
+                <img src="../../static/assets/img/rshahpfp.jpg"Image 1" class="forum-image">
+                <img src="../../static/assets/img/exxonlogo.png" alt="Image 2" class="forum-image">
+            </div>
+
+
+            <h3 class="trade-header">Introduction:</h3>
+            <p class="centered-text"> My name is Rishi Shah, I am a junior at the Peddie School and have been investing for 3 years. I intend on using investing to compound my money in the long term through both holding and quick trades. </p>
+            <br>
+            <h3 class="trade-header">The trade: Exxon Mobil @ $35.00 in November 2020.</h3>
+            <p class="centered-text">In November of 2020, Donald Trump was replaced with Joe Biden, who had vastly different political views. Based on Biden's campaigning for a more green America powered by electricity, it was evident that he was going to attack the use of natural gases. He would do this by enacting policies cutting down the amount of oil the country moves and leases. Because of this, I anticipated, along with many news sources such as Bloomberg, that gas prices would skyrocket. Exxon Mobil is a massive gas corporation in America, so I chose to invest into their stock, expecting it to increase with the rising gas prices. I ended up buying 5 shares of Exxon Mobil. Looking back, I would've bought more if I had more to invest at the time. It is now at $96.90. </p>
+
+            <div class="BearBull">
+                <p class="bold-text">Bearish or Bullish?</p>
+                <img src="../../static/assets/img/bullish.jpeg" alt="Your Image" class="BearBullimage">
+            </div>
+
+            <div class="container">
+                <header class="header">
+                    <h1>Financial Reports and Statistics:</h1>
+                    <a href="https://investor.exxonmobil.com/earnings/financial-results" class="link-text" target="_blank">Q3 2020</a>
+                    <h2>Here are someother important Financial Statistics as of January 22 2024 *I could not find information from 2020, please refer to report for further information :</h2>
+                    <br>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Measure</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Content for each cell -->
+                            <tr>
+                                <td>Market Cap</td>
+                                <td>386.75B</td>
+                            </tr>
+                            <tr>
+                                <td>Forward P/E</td>
+                                <td>10.29</td>
+                            </tr>
+                            <tr>
+                                <td>Profit Margin</td>
+                                <td>11.74%</td>
+                            </tr>
+                            <tr>
+                                <td>Diluted Earnings Per Share</td>
+                                <td>10.07</td>
+                            </tr>
+                            <tr>
+                                <td>EBITDA</td>
+                                <td>62.53B</td>
+                            </tr>
+                            <tr>
+                                <td>Debt/Equity Ratio</td>
+                                <td>19.8%</td>
+                            </tr>
+                            <tr>
+                                <td>52 week change as of November 2020</td>
+                                <td>51%</td>
+                            </tr>
+                            <tr>
+                                <td>Dividend Ratio</td>
+                                <td>3.92%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <header><h2>If you would like to see full detailed statistics, I would recommend searching up Yahoo Finance and your specific stock.</h2></header>
+                
+                </header>
+
+                <header><h2>After seeing all of the data leading up to this point, what would you do? When you're ready to find out click the button.</h2></header>
+                <div class="button-container">
+                    <button class="reveal-button" onclick="revealContent()">Reveal Outcome</button>
+                </div>
+                <div id="hiddenContent" class="hidden-content">
+                    <p class="takeaways-text">5 year graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/exxongrpah1.png" alt="Revealed Image" class="revealed-image">
+                    <br>
+                    <p class="takeaways-text">All time graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/exxongraph2.png" alt="Revealed Image" class="revealed-image">
+                     <p class="takeaways-text">My Takeaways:</p>
+                     <h2 class="takeaways-header">I had always kept up with the news, but this was the first time the news influenced my stock trading. This experience showed me the importance of being in touch with how current events will affect the markets - sources like Bloomberg, CNBC, and Reuters are all great places to get information. For example, Boeing is struggling with airplane door functional issues right now, causing their stock to take a hit. Keeping up with the news has allowed me to capitalize off this through trading options predicting the price to go down. </h2>
+                   
+                </div>
+
+                </div>
+
+
+        </div>
+
+
+
+</body>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+{% include "head.html" %}
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum Post - NVIDIA</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .header h2 {
+            font-size: 24px;
+            color: #008000; /* Green color */
+            margin: 5px 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Decreased gap between images */
+        }
+
+        .forum-image:nth-of-type(1) {
+            max-width: 30%; /* Adjust width percentage */
+            max-height: 300px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+
+        .forum-image:nth-of-type(2) {
+            max-width: 50%; /* Adjust width percentage */
+            max-height: 500px; /* Adjust height as needed */
+            object-fit: contain;
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .trade-header {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #008000; /* Green color */
+        }
+
+        .centered-text {
+            text-align: center;
+            font-size: 18px;
+            color: #000000; /* Black color */
+        }
+
+        .BearBull {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+
+        .BearBullimage {
+            max-width: 150px; /* Adjust image size */
+            max-height: 150px; /* Adjust image size */
+            border: 2px solid #008000; /* Green border */
+            border-radius: 8px;
+        }
+        .link-text {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #00bf4f; /* Blue color for link text */
+        }
+
+        .link-text:hover {
+            text-decoration: underline; /* Maintain underline on hover */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .reveal-button {
+            background-color: #008000;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hidden-content {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .revealed-image {
+            width: 100%; /* Adjust image width as needed */
+            max-width: 150%; /* Ensure responsiveness */
+            border: 4px solid #008000;
+            border-radius: 8px;
+        }
+
+        .takeaways-header {
+            text-align: center;
+            margin-top: 20px;
+            color: #008000;
+        }
+
+        .takeaways-text {
+            text-align: center;
+            color: #008000;
+            font-weight: bold;
+        }
+
+    </style>
+
+<script>
+    function revealContent() {
+        var hiddenContent = document.getElementById("hiddenContent");
+        hiddenContent.style.display = "block";
+    }
+</script>
+
+</head>
+
+<body>
+    <div class="flex h-screen bg-gray-50 dark:bg-gray-900" :class="{ 'overflow-hidden': isSideMenuOpen }">
+        <!-- Desktop sidebar -->
+
+        {% include "navbar.html" %}
+
+        <!-- Mobile sidebar -->
+        <!-- Backdrop -->
+        {% include "mobilenav.html" %}
+
+        <div class="container">
+            <header class="header">
+                <h1>NVIDIA Stock, May 2020. </h1>
+                <h2>Posted by Christopher Hu on January 22 2024</h2>
+            </header>
+    
+            <div class="content">
+                <img src="../../static/assets/img/chupfp.jpeg" alt="Image 1" class="forum-image">
+                <img src="../../static/assets/img/nvidialogo.png" alt="Image 2" class="forum-image">
+            </div>
+
+
+            <h3 class="trade-header">Introduction:</h3>
+            <p class="centered-text"> I attend the Lawrenceville School. I've been investing since 2019 and my goals with investing is to build generational wealth and being financially free.</p>
+            <br>
+            <h3 class="trade-header">The trade: Shares of NVIDIA at 135.90 on May 2020.</h3>
+            <p class="centered-text">I loved their products as I was really into PC building at the time and I knew they were a large presence in their respective industry. I bought a few shares but sold it shortly after because of fear of another COVID related stock recession. </p>
+
+            <div class="BearBull">
+                <p class="bold-text">Bearish or Bullish?</p>
+                <img src="../../static/assets/img/bullish.jpeg" alt="Your Image" class="BearBullimage">
+            </div>
+
+            <div class="container">
+                <header class="header">
+                    <h1>Financial Reports and Statistics:</h1>
+                    <a href="https://investor.nvidia.com/financial-info/financial-reports/" class="link-text" target="_blank">Q2 2020 Financial Report </a>
+                    <h2>Here are someother important Financial Statistics as of January 22 2024 *I could not find information from 2020, please refer to the report for further information:</h2>
+                    <br>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Measure</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Content for each cell -->
+                            <tr>
+                                <td>Market Cap</td>
+                                <td>1.469T $</td>
+                            </tr>
+                            <tr>
+                                <td>Forward P/E</td>
+                                <td>30.12</td>
+                            </tr>
+                            <tr>
+                                <td>Profit Margin</td>
+                                <td>42,10%</td>
+                            </tr>
+                            <tr>
+                                <td>Diluted Earnings Per Share</td>
+                                <td>7.56</td>
+                            </tr>
+                            <tr>
+                                <td>EBITDA</td>
+                                <td>22.16B</td>
+                            </tr>
+                            <tr>
+                                <td>Debt/Equity Ratio</td>
+                                <td>33.15%</td>
+                            </tr>
+                            <tr>
+                                <td>52 week change as of Q3 2019</td>
+                                <td>29.75%</td>
+                            </tr>
+                            <tr>
+                                <td>Dividend Ratio</td>
+                                <td>0.3%, 3 times per year</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <header><h2>If you would like to see full detailed statistics, I would recommend searching up Yahoo Finance and your specific stock.</h2></header>
+                
+                </header>
+
+                <header><h2>After seeing all of the data leading up to this point, what would you do? When you're ready to find out click the button.</h2></header>
+                <div class="button-container">
+                    <button class="reveal-button" onclick="revealContent()">Reveal Outcome</button>
+                </div>
+                <div id="hiddenContent" class="hidden-content">
+                    <p class="takeaways-text">5 year graph:</p>
+                    <br>
+                    <img src="../../static/assets/img/nvidiahugraph1.png" alt="Revealed Image" class="revealed-image">
+                    <br>
+                     <p class="takeaways-text">My Takeaways:</p>
+                     <h2 class="takeaways-header">I shouldn't have sold out of fear, some advice is to think extremely logically when making decisions in the stock market. After the trade the stock grew exponentially. </h2>
+                   
+                </div>
+
+                </div>
+
+
+        </div>
+
+
+
+</body>

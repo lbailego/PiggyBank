@@ -91,6 +91,22 @@ def forumrjiang():
 def forumvyao():
     return render_template("pages/forumvyao.html") 
 
+@app.route("/forumawoo.html")
+def forumawoo():
+    return render_template("pages/forumawoo.html") 
+
+@app.route("/forumazweiback.html")
+def forumazweiback():
+    return render_template("pages/forumazweiback.html") 
+
+@app.route("/forumchu.html")
+def forumchu():
+    return render_template("pages/forumchu.html") 
+
+@app.route("/forumrshah.html")
+def forumrshah():
+    return render_template("pages/forumrshah.html") 
+
 
 
 if __name__ == "__main__":
